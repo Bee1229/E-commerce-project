@@ -66,3 +66,22 @@ FILE_FORMAT =(FORMAT_NAME = e_commerce_format)
 ON_ERROR = 'continue';
 
 Select * from e_commerce_shipments;
+
+select * from order_status;
+
+--Testing out the code 
+
+update e_commerce_shipments 
+set delivered_at = '2024-01-05' where shipment_id = 'S1'
+
+update e_commerce_shipments 
+set status = 'shipped' where shipment_id = 'S1'
+
+update e_commerce_shipments 
+set delivered_at = '2024-01-13' where shipment_id = 'S8'
+
+SELECT count(*)
+from order_status
+where final_status = 'DELAYED';
+
+select * from order_status;
